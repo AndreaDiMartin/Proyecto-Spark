@@ -1,0 +1,30 @@
+schema_clean = StructType(
+    [
+        StructField("track_name", StringType(), True),
+        StructField("duration", LongType(), True),
+        StructField("explicit", StringType(), True),
+        StructField("popularity", IntegerType(), True),
+        StructField("acousticness", DoubleType(), True),
+        StructField("danceability", DoubleType(), True),
+        StructField("energy", DoubleType(), True),
+        StructField("instrumentalness", DoubleType(), True),
+        StructField("key", IntegerType(), True),
+        StructField("liveness", DoubleType(), True),
+        StructField("loudness", DoubleType(), True),
+        StructField("speechiness", DoubleType(), True),
+        StructField("tempo", DoubleType(), True),
+        StructField("time_signature", IntegerType(), True),
+        StructField("valence", DoubleType(), True),
+        StructField("album_name", StringType(), True),
+        StructField("album_type", StringType(), True),
+        StructField("album_popularity", IntegerType(), True),
+        StructField("artist_name", StringType(), True),
+        StructField("artist_popularity", IntegerType(), True),
+        StructField("followers", IntegerType(), True),
+        StructField("genre_id", StringType(), True),
+        StructField("year_of_release", IntegerType(), True),
+        StructField("month_of_release", IntegerType(), True),
+        StructField("weekday_of_release", IntegerType(), True),
+        StructField("day_of_release", IntegerType(), True)
+    ]
+)
