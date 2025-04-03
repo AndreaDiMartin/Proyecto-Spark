@@ -37,7 +37,11 @@ schema = StructType(
     ]
 )
 
-df = spark.read.schema(schema).option("header","true").csv("file:///home/hadoop/tracks-sample.csv")
+df = spark.read.schema(schema).option("header","true").option("quote", '"').option("escape", '"').csv("file:///home/hadoop/tracks-sample.csv")
+
+#Remove double quotes from track_name and add them at the beginning and end of the string
+df = df.withColumn("track_name",regexp_replace("track_name","\""," "))
+df = df.withColumn("track_name", concat(lit('"'),col("track_name"),lit('"')))
 
 #Drop rows with null values
 df_no_null = df.filter(df["valence"].isNotNull())
