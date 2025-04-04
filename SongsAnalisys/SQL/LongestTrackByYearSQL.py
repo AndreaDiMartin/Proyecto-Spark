@@ -4,9 +4,9 @@ from pyspark.sql import SparkSession
 spark = SparkSession.builder.appName("LongestTrackByYearSQL").getOrCreate()
 
 # Definir rutas
-input_path = "file:///C:/Users/Daniela/Downloads/cleaned_tracks.csv"
+input_path = "file:///home/hadoop/cleaned_tracks.csv"
 
-output_path = "file:///C:/Users/Daniela/Downloads/output/output_longest_track_by_year_sql"
+output_path = "file:///home/hadoop/output_longest_track_by_year_sql"
 
 # Leer datos en un DataFrame
 df = spark.read.option("header", "true").option("inferSchema", "true").csv(input_path)

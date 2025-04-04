@@ -5,9 +5,9 @@ from pyspark.sql.functions import col, lower, regexp_replace, explode, split, co
 spark = SparkSession.builder.appName("TrackWordCountSpark").getOrCreate()
 
 # Definir rutas de entrada y salida
-input_path = "file:///C:/Users/Daniela/Downloads/cleaned_tracks.csv"
+input_path = "file:///home/hadoop/cleaned_tracks.csv"
 
-output_path = "file:///C:/Users/Daniela/Downloads/output/output_track_word_count_df"
+output_path = "file:///home/hadoop/output_track_word_count_df"
 
 # Lista de palabras a ignorar (stop words)
 STOP_WORDS = set([

@@ -5,9 +5,9 @@ from pyspark.sql.functions import col
 spark = SparkSession.builder.appName("MostPopularYearSQL").getOrCreate()
 
 # Definir rutas
-input_path = "file:///C:/Users/Daniela/Downloads/cleaned_tracks.csv"
+input_path = "file:///home/hadoop/cleaned_tracks.csv"
 
-output_path = "file:///C:/Users/Daniela/Downloads/output_most_popular_year_sql"
+output_path = "file:///home/hadoop/output_most_popular_year_sql"
 
 # Cargar datos desde CSV
 df = spark.read.option("header", True).option("inferSchema", True).csv(input_path)
