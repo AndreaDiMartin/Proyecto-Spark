@@ -4,9 +4,9 @@ from pyspark.sql import SparkSession
 spark = SparkSession.builder.appName("SongsFeaturesPerYear_SQL").getOrCreate()
 
 # Definir ruta de entrada
-input_path = "file:///C:/Users/Daniela/Downloads/cleaned_tracks.csv"
+input_path = "file:///home/hadoop/cleaned_tracks.csv"
 
-output_path = "file:///C:/Users/Daniela/Downloads/feature_per_year_sql"
+output_path = "file:///home/hadoop/output_feature_per_year_sql"
 
 # Cargar datos en DataFrame con esquema y crear tabla temporal
 df = spark.read.option("header", "true").option("inferSchema", "true").csv(input_path)

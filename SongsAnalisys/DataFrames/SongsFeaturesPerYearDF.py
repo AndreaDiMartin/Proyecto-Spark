@@ -5,9 +5,9 @@ from pyspark.sql.functions import avg, col
 spark = SparkSession.builder.appName("SongsFeaturesPerYear_DF").getOrCreate()
 
 # Definir ruta de entrada
-input_path = "file:///C:/Users/Daniela/Downloads/cleaned_tracks.csv"
+input_path = "file:///home/hadoop/cleaned_tracks.csv"
 
-output_path = "file:///C:/Users/Daniela/Downloads/output/songs_features_per_year"
+output_path = "file:///home/hadoop/outputsongs_features_per_year"
 
 # Cargar datos en DataFrame
 df = spark.read.option("header", "true").option("inferSchema", "true").csv(input_path)
